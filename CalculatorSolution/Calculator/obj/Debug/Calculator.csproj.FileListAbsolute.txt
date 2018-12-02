@@ -1,0 +1,7 @@
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\bin\Debug\Calculator.exe
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\bin\Debug\Calculator.pdb
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\obj\Debug\Calculator.exe
+C:\Users\dolsky\source\repos\CalculatorSolution\Calculator\obj\Debug\Calculator.pdb
