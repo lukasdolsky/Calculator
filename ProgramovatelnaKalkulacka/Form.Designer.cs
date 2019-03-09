@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +73,9 @@
             this.tbPolynom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnJednotky = new System.Windows.Forms.Button();
+            this.tbJednotky = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
@@ -552,16 +555,16 @@
             this.grafPolynom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea12.Name = "ChartArea1";
-            this.grafPolynom.ChartAreas.Add(chartArea12);
+            chartArea1.Name = "ChartArea1";
+            this.grafPolynom.ChartAreas.Add(chartArea1);
             this.grafPolynom.Location = new System.Drawing.Point(12, 287);
             this.grafPolynom.Name = "grafPolynom";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Name = "Curve";
-            series12.XValueMember = "X";
-            series12.YValueMembers = "Y";
-            this.grafPolynom.Series.Add(series12);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Name = "Curve";
+            series1.XValueMember = "X";
+            series1.YValueMembers = "Y";
+            this.grafPolynom.Series.Add(series1);
             this.grafPolynom.Size = new System.Drawing.Size(351, 213);
             this.grafPolynom.TabIndex = 5;
             this.grafPolynom.Text = "grafPolynom";
@@ -694,6 +697,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnJednotky);
+            this.tabPage3.Controls.Add(this.tbJednotky);
+            this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.button25);
             this.tabPage3.Controls.Add(this.button24);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -702,6 +708,32 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Bytove jednotky";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnJednotky
+            // 
+            this.btnJednotky.Location = new System.Drawing.Point(252, 98);
+            this.btnJednotky.Name = "btnJednotky";
+            this.btnJednotky.Size = new System.Drawing.Size(75, 23);
+            this.btnJednotky.TabIndex = 25;
+            this.btnJednotky.Text = "OK";
+            this.btnJednotky.UseVisualStyleBackColor = true;
+            this.btnJednotky.Click += new System.EventHandler(this.btnJednotky_Click);
+            // 
+            // tbJednotky
+            // 
+            this.tbJednotky.Location = new System.Drawing.Point(24, 98);
+            this.tbJednotky.Name = "tbJednotky";
+            this.tbJednotky.Size = new System.Drawing.Size(201, 20);
+            this.tbJednotky.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(284, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Seznam zúčastněných bytových jednotek (oddělených \",\")";
             // 
             // button25
             // 
@@ -715,13 +747,14 @@
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(21, 149);
+            this.button24.Location = new System.Drawing.Point(21, 15);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(326, 39);
             this.button24.TabIndex = 21;
             this.button24.Text = "Importovat XML konfiguracni soubor";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.importXMLFileDialog_Click);
             // 
             // Form
             // 
@@ -742,6 +775,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -793,6 +827,9 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.TextBox tbJednotky;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnJednotky;
     }
 }
 

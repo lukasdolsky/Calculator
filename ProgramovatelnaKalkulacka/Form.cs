@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ProgramovatelnaKalkulacka
 {
@@ -139,5 +140,32 @@ namespace ProgramovatelnaKalkulacka
             MemoryStore = 0;
         }
         #endregion
+
+        #region Hlasovaci Prava
+        private double plochaCelkem;
+        private double plochaZadanychJednotek;
+        private XmlDocument doc = new XmlDocument();
+        OpenFileDialog ofd = new OpenFileDialog();
+
+        private void importXMLFileDialog_Click(object sender, EventArgs e)
+        {
+            ofd.Filter = "XML|*.xml";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                doc = HlasovaciPrava.nactiXML(ofd.FileName);
+                plochaCelkem = HlasovaciPrava.plochaVsechJednotek(doc);
+            }
+        }
+        private void btnJednotky_Click(object sender, EventArgs e)
+        {
+            List<string> bytoveJednotky = HlasovaciPrava.nactiJednotky(tbJednotky.Text);
+            plochaZadanychJednotek = HlasovaciPrava.vypoctiPlochuZadanychJednotek(bytoveJednotky);
+            MessageBox.Show(String.Format("Celkova plocha zadanych jednotek je: {0}", plochaZadanychJednotek), "xmlError", MessageBoxButtons.OK);
+
+        }
+        
+        #endregion
+
+
     }
 }

@@ -80,7 +80,7 @@ namespace ProgramovatelnaKalkulacka
             for (double x = tbPocatek; x <= tbKonec; x += velikostKroku) {
                 y = 0.0;
                 foreach (DataRow drClen in dtCleni.Rows) {
-                    koeficient = (double)(drClen)["exp"];
+                    koeficient = (double)(drClen)["k"];
                     exponent = (double)(drClen)["exp"];
 
                     if (exponent == 0.0)
