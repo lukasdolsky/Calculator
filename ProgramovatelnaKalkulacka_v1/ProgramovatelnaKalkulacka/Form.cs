@@ -144,6 +144,7 @@ namespace ProgramovatelnaKalkulacka
         #region Hlasovaci Prava
         private double plochaCelkem;
         private double plochaZadanychJednotek;
+        private double plochaVsechJednotek;
         private XmlDocument doc = new XmlDocument();
         OpenFileDialog ofd = new OpenFileDialog();
 
@@ -153,15 +154,24 @@ namespace ProgramovatelnaKalkulacka
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 doc = HlasovaciPrava.nactiXML(ofd.FileName);
+                label6.Text = ofd.FileName;
                 plochaCelkem = HlasovaciPrava.plochaVsechJednotek(doc);
             }
         }
         private void btnJednotky_Click(object sender, EventArgs e)
         {
             List<string> bytoveJednotky = HlasovaciPrava.nactiJednotky(tbJednotky.Text);
-            plochaZadanychJednotek = HlasovaciPrava.vypoctiPlochuZadanychJednotek(bytoveJednotky);
-            MessageBox.Show(String.Format("Celkova plocha zadanych jednotek je: {0}", plochaZadanychJednotek), "xmlError", MessageBoxButtons.OK);
-
+            plochaZadanychJednotek = HlasovaciPrava.vypoctiPlochuZadanychJednotek(bytoveJednotky,doc);
+            plochaVsechJednotek = HlasovaciPrava.plochaVsechJednotek(doc);
+            if (HlasovaciPrava.jeUsnasenischopna(plochaVsechJednotek, plochaZadanychJednotek))
+            {
+                label7.ForeColor = System.Drawing.Color.Green;
+                label7.Text = string.Format("Schuze je usnasenischopna, podil zucastnenych vlastniku jednotek je: {0} %", Math.Round(plochaZadanychJednotek / plochaVsechJednotek * 100,2));
+            }
+            else {
+                label7.ForeColor = System.Drawing.Color.Red;
+                label7.Text = string.Format("Schuze neni usnasenischopna, podil zucastnenych vlastniku jednotek je: {0} %", plochaZadanychJednotek / plochaVsechJednotek * 100);
+            }
         }
         
         #endregion

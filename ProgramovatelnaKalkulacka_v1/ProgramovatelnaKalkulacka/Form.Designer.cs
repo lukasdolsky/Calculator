@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,10 +73,11 @@
             this.tbPolynom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnJednotky = new System.Windows.Forms.Button();
             this.tbJednotky = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -555,16 +556,16 @@
             this.grafPolynom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.grafPolynom.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.grafPolynom.ChartAreas.Add(chartArea3);
             this.grafPolynom.Location = new System.Drawing.Point(12, 287);
             this.grafPolynom.Name = "grafPolynom";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Name = "Curve";
-            series1.XValueMember = "X";
-            series1.YValueMembers = "Y";
-            this.grafPolynom.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Name = "Curve";
+            series3.XValueMember = "X";
+            series3.YValueMembers = "Y";
+            this.grafPolynom.Series.Add(series3);
             this.grafPolynom.Size = new System.Drawing.Size(351, 213);
             this.grafPolynom.TabIndex = 5;
             this.grafPolynom.Text = "grafPolynom";
@@ -697,10 +698,11 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.btnJednotky);
             this.tabPage3.Controls.Add(this.tbJednotky);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.button25);
             this.tabPage3.Controls.Add(this.button24);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -709,9 +711,27 @@
             this.tabPage3.Text = "Bytove jednotky";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(21, 284);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(306, 67);
+            this.label7.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Gray;
+            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(21, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 14);
+            this.label6.TabIndex = 26;
+            // 
             // btnJednotky
             // 
-            this.btnJednotky.Location = new System.Drawing.Point(252, 98);
+            this.btnJednotky.Location = new System.Drawing.Point(252, 127);
             this.btnJednotky.Name = "btnJednotky";
             this.btnJednotky.Size = new System.Drawing.Size(75, 23);
             this.btnJednotky.TabIndex = 25;
@@ -721,7 +741,7 @@
             // 
             // tbJednotky
             // 
-            this.tbJednotky.Location = new System.Drawing.Point(24, 98);
+            this.tbJednotky.Location = new System.Drawing.Point(24, 127);
             this.tbJednotky.Name = "tbJednotky";
             this.tbJednotky.Size = new System.Drawing.Size(201, 20);
             this.tbJednotky.TabIndex = 24;
@@ -729,21 +749,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 69);
+            this.label5.Location = new System.Drawing.Point(21, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(284, 13);
             this.label5.TabIndex = 23;
             this.label5.Text = "Seznam zúčastněných bytových jednotek (oddělených \",\")";
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(21, 265);
-            this.button25.Margin = new System.Windows.Forms.Padding(2);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(326, 39);
-            this.button25.TabIndex = 22;
-            this.button25.Text = "Vygeneruj hlasovaci prava";
-            this.button25.UseVisualStyleBackColor = true;
             // 
             // button24
             // 
@@ -824,12 +834,13 @@
         private System.Windows.Forms.TextBox tbPocatek;
         private System.Windows.Forms.DataVisualization.Charting.Chart grafPolynom;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.TextBox tbJednotky;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnJednotky;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

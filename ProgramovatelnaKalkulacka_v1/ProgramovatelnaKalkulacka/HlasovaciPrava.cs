@@ -43,9 +43,13 @@ namespace ProgramovatelnaKalkulacka
 
         public static double vypoctiPlochuZadanychJednotek(List<string> jednotky, XmlDocument doc) {
             double celkovaPlochaZadanychJednotek = 0;
+            double plocha = 0;
+            int jednotkyIndex;
             XmlNodeList nodeList = doc.SelectNodes("/bytovy_dum/byt");
+            
             foreach (string id in jednotky) {
-                double plocha = 0;
+                jednotkyIndex = Convert.ToInt32(id);
+                plocha = Convert.ToDouble(nodeList.Cast<XmlNode>().Where(n => n["cislo_bytu"].InnerText == id).Select(x => x["plocha"].InnerText).SingleOrDefault());
                 celkovaPlochaZadanychJednotek += plocha;
             }
             return celkovaPlochaZadanychJednotek;
