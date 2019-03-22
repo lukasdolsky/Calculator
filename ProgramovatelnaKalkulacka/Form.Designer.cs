@@ -1,4 +1,6 @@
-﻿namespace ProgramovatelnaKalkulacka
+﻿using System.Windows.Forms;
+
+namespace ProgramovatelnaKalkulacka
 {
     partial class Form
     {
@@ -28,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,6 +59,46 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.tbDisplay = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnExe = new System.Windows.Forms.Button();
+            this.btnAbs = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.btnGX = new System.Windows.Forms.Button();
+            this.btnGXMax = new System.Windows.Forms.Button();
+            this.btnGXMin = new System.Windows.Forms.Button();
+            this.btnPravaZavorka = new System.Windows.Forms.Button();
+            this.btnLevaZavorka = new System.Windows.Forms.Button();
+            this.btnF1 = new System.Windows.Forms.Button();
+            this.btnSqrt = new System.Windows.Forms.Button();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnKrat = new System.Windows.Forms.Button();
+            this.btnDeleno = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnEqual = new System.Windows.Forms.Button();
+            this.btnCE = new System.Windows.Forms.Button();
+            this.btnDot = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btnIFZx = new System.Windows.Forms.Button();
+            this.btnIFNx = new System.Windows.Forms.Button();
+            this.btnLBLx = new System.Windows.Forms.Button();
+            this.btnIFPx = new System.Windows.Forms.Button();
+            this.btnMSx = new System.Windows.Forms.Button();
+            this.btnMRx = new System.Windows.Forms.Button();
+            this.btnRecord = new System.Windows.Forms.Button();
+            this.tbProgram = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grafPolynom = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgBody = new System.Windows.Forms.DataGridView();
@@ -82,6 +124,7 @@
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafPolynom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgBody)).BeginInit();
@@ -92,10 +135,11 @@
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.ItemSize = new System.Drawing.Size(65, 18);
-            this.tabControl.Location = new System.Drawing.Point(14, 16);
+            this.tabControl.Location = new System.Drawing.Point(12, 15);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(377, 529);
@@ -110,7 +154,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(369, 503);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Kalkulacka";
+            this.tabPage1.Text = "Kalkulačka";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
@@ -538,6 +582,441 @@
             this.tbDisplay.Text = "0";
             this.tbDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnExe);
+            this.tabPage4.Controls.Add(this.btnAbs);
+            this.tabPage4.Controls.Add(this.button28);
+            this.tabPage4.Controls.Add(this.btnGX);
+            this.tabPage4.Controls.Add(this.btnGXMax);
+            this.tabPage4.Controls.Add(this.btnGXMin);
+            this.tabPage4.Controls.Add(this.btnPravaZavorka);
+            this.tabPage4.Controls.Add(this.btnLevaZavorka);
+            this.tabPage4.Controls.Add(this.btnF1);
+            this.tabPage4.Controls.Add(this.btnSqrt);
+            this.tabPage4.Controls.Add(this.btnPower);
+            this.tabPage4.Controls.Add(this.btnReset);
+            this.tabPage4.Controls.Add(this.btnPlus);
+            this.tabPage4.Controls.Add(this.btnMinus);
+            this.tabPage4.Controls.Add(this.btnKrat);
+            this.tabPage4.Controls.Add(this.btnDeleno);
+            this.tabPage4.Controls.Add(this.button25);
+            this.tabPage4.Controls.Add(this.btnEnter);
+            this.tabPage4.Controls.Add(this.btnEqual);
+            this.tabPage4.Controls.Add(this.btnCE);
+            this.tabPage4.Controls.Add(this.btnDot);
+            this.tabPage4.Controls.Add(this.btn0);
+            this.tabPage4.Controls.Add(this.btn9);
+            this.tabPage4.Controls.Add(this.btn6);
+            this.tabPage4.Controls.Add(this.btn3);
+            this.tabPage4.Controls.Add(this.btn5);
+            this.tabPage4.Controls.Add(this.btn8);
+            this.tabPage4.Controls.Add(this.btn7);
+            this.tabPage4.Controls.Add(this.btn4);
+            this.tabPage4.Controls.Add(this.btn2);
+            this.tabPage4.Controls.Add(this.btn1);
+            this.tabPage4.Controls.Add(this.btnIFZx);
+            this.tabPage4.Controls.Add(this.btnIFNx);
+            this.tabPage4.Controls.Add(this.btnLBLx);
+            this.tabPage4.Controls.Add(this.btnIFPx);
+            this.tabPage4.Controls.Add(this.btnMSx);
+            this.tabPage4.Controls.Add(this.btnMRx);
+            this.tabPage4.Controls.Add(this.btnRecord);
+            this.tabPage4.Controls.Add(this.tbProgram);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(369, 503);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Programovatelná kalkulačka";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnExe
+            // 
+            this.btnExe.Location = new System.Drawing.Point(189, 462);
+            this.btnExe.Name = "btnExe";
+            this.btnExe.Size = new System.Drawing.Size(51, 37);
+            this.btnExe.TabIndex = 44;
+            this.btnExe.Text = "EXE";
+            this.btnExe.UseVisualStyleBackColor = true;
+            this.btnExe.Click += new System.EventHandler(this.btnExeClick);
+            // 
+            // btnAbs
+            // 
+            this.btnAbs.Location = new System.Drawing.Point(189, 247);
+            this.btnAbs.Name = "btnAbs";
+            this.btnAbs.Size = new System.Drawing.Size(51, 37);
+            this.btnAbs.TabIndex = 43;
+            this.btnAbs.Text = "ABS";
+            this.btnAbs.UseVisualStyleBackColor = true;
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(246, 247);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(51, 37);
+            this.button28.TabIndex = 42;
+            this.button28.Text = "GY";
+            this.button28.UseVisualStyleBackColor = true;
+            // 
+            // btnGX
+            // 
+            this.btnGX.Location = new System.Drawing.Point(246, 205);
+            this.btnGX.Name = "btnGX";
+            this.btnGX.Size = new System.Drawing.Size(51, 37);
+            this.btnGX.TabIndex = 41;
+            this.btnGX.Text = "GX";
+            this.btnGX.UseVisualStyleBackColor = true;
+            // 
+            // btnGXMax
+            // 
+            this.btnGXMax.Location = new System.Drawing.Point(303, 247);
+            this.btnGXMax.Name = "btnGXMax";
+            this.btnGXMax.Size = new System.Drawing.Size(63, 37);
+            this.btnGXMax.TabIndex = 40;
+            this.btnGXMax.Text = "GXMAX";
+            this.btnGXMax.UseVisualStyleBackColor = true;
+            // 
+            // btnGXMin
+            // 
+            this.btnGXMin.Location = new System.Drawing.Point(303, 204);
+            this.btnGXMin.Name = "btnGXMin";
+            this.btnGXMin.Size = new System.Drawing.Size(63, 37);
+            this.btnGXMin.TabIndex = 39;
+            this.btnGXMin.Text = "GXMIN";
+            this.btnGXMin.UseVisualStyleBackColor = true;
+            // 
+            // btnPravaZavorka
+            // 
+            this.btnPravaZavorka.Location = new System.Drawing.Point(246, 419);
+            this.btnPravaZavorka.Name = "btnPravaZavorka";
+            this.btnPravaZavorka.Size = new System.Drawing.Size(51, 37);
+            this.btnPravaZavorka.TabIndex = 38;
+            this.btnPravaZavorka.Text = ")";
+            this.btnPravaZavorka.UseVisualStyleBackColor = true;
+            this.btnPravaZavorka.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnLevaZavorka
+            // 
+            this.btnLevaZavorka.Location = new System.Drawing.Point(246, 376);
+            this.btnLevaZavorka.Name = "btnLevaZavorka";
+            this.btnLevaZavorka.Size = new System.Drawing.Size(51, 37);
+            this.btnLevaZavorka.TabIndex = 37;
+            this.btnLevaZavorka.Text = "(";
+            this.btnLevaZavorka.UseVisualStyleBackColor = true;
+            this.btnLevaZavorka.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnF1
+            // 
+            this.btnF1.Location = new System.Drawing.Point(132, 247);
+            this.btnF1.Name = "btnF1";
+            this.btnF1.Size = new System.Drawing.Size(51, 37);
+            this.btnF1.TabIndex = 36;
+            this.btnF1.Text = "F1";
+            this.btnF1.UseVisualStyleBackColor = true;
+            this.btnF1.Click += new System.EventHandler(this.btnF1Click);
+            // 
+            // btnSqrt
+            // 
+            this.btnSqrt.Location = new System.Drawing.Point(246, 333);
+            this.btnSqrt.Name = "btnSqrt";
+            this.btnSqrt.Size = new System.Drawing.Size(51, 37);
+            this.btnSqrt.TabIndex = 34;
+            this.btnSqrt.Text = "√";
+            this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnPower
+            // 
+            this.btnPower.Location = new System.Drawing.Point(246, 290);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(51, 37);
+            this.btnPower.TabIndex = 33;
+            this.btnPower.Text = "^";
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(132, 462);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(51, 37);
+            this.btnReset.TabIndex = 32;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.smazatVsePrgClick);
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Location = new System.Drawing.Point(189, 290);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(51, 37);
+            this.btnPlus.TabIndex = 31;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Location = new System.Drawing.Point(189, 333);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(51, 37);
+            this.btnMinus.TabIndex = 30;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnKrat
+            // 
+            this.btnKrat.Location = new System.Drawing.Point(189, 376);
+            this.btnKrat.Name = "btnKrat";
+            this.btnKrat.Size = new System.Drawing.Size(51, 37);
+            this.btnKrat.TabIndex = 29;
+            this.btnKrat.Text = "*";
+            this.btnKrat.UseVisualStyleBackColor = true;
+            this.btnKrat.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnDeleno
+            // 
+            this.btnDeleno.Location = new System.Drawing.Point(189, 419);
+            this.btnDeleno.Name = "btnDeleno";
+            this.btnDeleno.Size = new System.Drawing.Size(51, 37);
+            this.btnDeleno.TabIndex = 28;
+            this.btnDeleno.Text = "/";
+            this.btnDeleno.UseVisualStyleBackColor = true;
+            this.btnDeleno.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(18, 176);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(348, 23);
+            this.button25.TabIndex = 27;
+            this.button25.Text = "Spusť nahrané makro";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.spustMakroClick);
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(75, 462);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(51, 37);
+            this.btnEnter.TabIndex = 26;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnEqual
+            // 
+            this.btnEqual.Location = new System.Drawing.Point(18, 462);
+            this.btnEqual.Name = "btnEqual";
+            this.btnEqual.Size = new System.Drawing.Size(51, 37);
+            this.btnEqual.TabIndex = 25;
+            this.btnEqual.Text = "=";
+            this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnCE
+            // 
+            this.btnCE.Location = new System.Drawing.Point(132, 419);
+            this.btnCE.Name = "btnCE";
+            this.btnCE.Size = new System.Drawing.Size(51, 37);
+            this.btnCE.TabIndex = 24;
+            this.btnCE.Text = "CE";
+            this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.smazatJedenZnakPrgClick);
+            // 
+            // btnDot
+            // 
+            this.btnDot.Location = new System.Drawing.Point(75, 419);
+            this.btnDot.Name = "btnDot";
+            this.btnDot.Size = new System.Drawing.Size(51, 37);
+            this.btnDot.TabIndex = 23;
+            this.btnDot.Text = ".";
+            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn0
+            // 
+            this.btn0.Location = new System.Drawing.Point(18, 419);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(51, 37);
+            this.btn0.TabIndex = 22;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn9
+            // 
+            this.btn9.Location = new System.Drawing.Point(132, 290);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(51, 37);
+            this.btn9.TabIndex = 21;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn6
+            // 
+            this.btn6.Location = new System.Drawing.Point(132, 333);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(51, 37);
+            this.btn6.TabIndex = 20;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn3
+            // 
+            this.btn3.Location = new System.Drawing.Point(132, 376);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(51, 37);
+            this.btn3.TabIndex = 19;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn5
+            // 
+            this.btn5.Location = new System.Drawing.Point(75, 333);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(51, 37);
+            this.btn5.TabIndex = 18;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn8
+            // 
+            this.btn8.Location = new System.Drawing.Point(75, 290);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(51, 37);
+            this.btn8.TabIndex = 17;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn7
+            // 
+            this.btn7.Location = new System.Drawing.Point(18, 290);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(51, 37);
+            this.btn7.TabIndex = 16;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn4
+            // 
+            this.btn4.Location = new System.Drawing.Point(18, 333);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(51, 37);
+            this.btn4.TabIndex = 15;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn2
+            // 
+            this.btn2.Location = new System.Drawing.Point(75, 376);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(51, 37);
+            this.btn2.TabIndex = 14;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btn1
+            // 
+            this.btn1.Location = new System.Drawing.Point(18, 376);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(51, 37);
+            this.btn1.TabIndex = 13;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnIFZx
+            // 
+            this.btnIFZx.Location = new System.Drawing.Point(75, 247);
+            this.btnIFZx.Name = "btnIFZx";
+            this.btnIFZx.Size = new System.Drawing.Size(51, 37);
+            this.btnIFZx.TabIndex = 12;
+            this.btnIFZx.Text = "IFZ(x)";
+            this.btnIFZx.UseVisualStyleBackColor = true;
+            this.btnIFZx.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnIFNx
+            // 
+            this.btnIFNx.Location = new System.Drawing.Point(18, 247);
+            this.btnIFNx.Name = "btnIFNx";
+            this.btnIFNx.Size = new System.Drawing.Size(51, 37);
+            this.btnIFNx.TabIndex = 11;
+            this.btnIFNx.Text = "IFN(x)";
+            this.btnIFNx.UseVisualStyleBackColor = true;
+            this.btnIFNx.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnLBLx
+            // 
+            this.btnLBLx.Location = new System.Drawing.Point(132, 204);
+            this.btnLBLx.Name = "btnLBLx";
+            this.btnLBLx.Size = new System.Drawing.Size(51, 37);
+            this.btnLBLx.TabIndex = 10;
+            this.btnLBLx.Text = "LBL(x)";
+            this.btnLBLx.UseVisualStyleBackColor = true;
+            // 
+            // btnIFPx
+            // 
+            this.btnIFPx.Location = new System.Drawing.Point(189, 204);
+            this.btnIFPx.Name = "btnIFPx";
+            this.btnIFPx.Size = new System.Drawing.Size(51, 37);
+            this.btnIFPx.TabIndex = 9;
+            this.btnIFPx.Text = "IFP(x)";
+            this.btnIFPx.UseVisualStyleBackColor = true;
+            this.btnIFPx.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnMSx
+            // 
+            this.btnMSx.Location = new System.Drawing.Point(75, 204);
+            this.btnMSx.Name = "btnMSx";
+            this.btnMSx.Size = new System.Drawing.Size(51, 37);
+            this.btnMSx.TabIndex = 8;
+            this.btnMSx.Text = "MS(x)";
+            this.btnMSx.UseVisualStyleBackColor = true;
+            this.btnMSx.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnMRx
+            // 
+            this.btnMRx.Location = new System.Drawing.Point(18, 204);
+            this.btnMRx.Name = "btnMRx";
+            this.btnMRx.Size = new System.Drawing.Size(51, 37);
+            this.btnMRx.TabIndex = 7;
+            this.btnMRx.Text = "MR(x)";
+            this.btnMRx.UseVisualStyleBackColor = true;
+            this.btnMRx.Click += new System.EventHandler(this.btnPrgClick);
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.Location = new System.Drawing.Point(18, 147);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(348, 23);
+            this.btnRecord.TabIndex = 6;
+            this.btnRecord.Text = "Začni nahrávat makro";
+            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            // 
+            // tbProgram
+            // 
+            this.tbProgram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProgram.Location = new System.Drawing.Point(18, 15);
+            this.tbProgram.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProgram.Multiline = true;
+            this.tbProgram.Name = "tbProgram";
+            this.tbProgram.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbProgram.Size = new System.Drawing.Size(349, 127);
+            this.tbProgram.TabIndex = 5;
+            this.tbProgram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.grafPolynom);
@@ -556,16 +1035,16 @@
             this.grafPolynom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.grafPolynom.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.grafPolynom.ChartAreas.Add(chartArea1);
             this.grafPolynom.Location = new System.Drawing.Point(12, 287);
             this.grafPolynom.Name = "grafPolynom";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Name = "Curve";
-            series3.XValueMember = "X";
-            series3.YValueMembers = "Y";
-            this.grafPolynom.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Name = "Curve";
+            series1.XValueMember = "X";
+            series1.YValueMembers = "Y";
+            this.grafPolynom.Series.Add(series1);
             this.grafPolynom.Size = new System.Drawing.Size(351, 213);
             this.grafPolynom.TabIndex = 5;
             this.grafPolynom.Text = "grafPolynom";
@@ -708,7 +1187,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(369, 503);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Bytove jednotky";
+            this.tabPage3.Text = "Bytové jednotky";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -779,6 +1258,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grafPolynom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgBody)).EndInit();
@@ -841,6 +1322,46 @@
         private System.Windows.Forms.Button btnJednotky;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnIFZx;
+        private System.Windows.Forms.Button btnIFNx;
+        private System.Windows.Forms.Button btnLBLx;
+        private System.Windows.Forms.Button btnIFPx;
+        private System.Windows.Forms.Button btnMSx;
+        private System.Windows.Forms.Button btnMRx;
+        private System.Windows.Forms.Button btnRecord;
+        private System.Windows.Forms.TextBox tbProgram;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnEqual;
+        private System.Windows.Forms.Button btnCE;
+        private System.Windows.Forms.Button btnDot;
+        private System.Windows.Forms.Button btn0;
+        private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btnKrat;
+        private System.Windows.Forms.Button btnDeleno;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnSqrt;
+        private System.Windows.Forms.Button btnPower;
+        private System.Windows.Forms.Button btnF1;
+        private System.Windows.Forms.Button btnPravaZavorka;
+        private System.Windows.Forms.Button btnLevaZavorka;
+        private System.Windows.Forms.Button btnAbs;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button btnGX;
+        private System.Windows.Forms.Button btnGXMax;
+        private System.Windows.Forms.Button btnGXMin;
+        private Button btnExe;
     }
 }
 

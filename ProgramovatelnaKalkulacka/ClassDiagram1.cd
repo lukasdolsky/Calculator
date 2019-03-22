@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProgramovatelnaKalkulacka.Form" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AnjWDkCQEWKAaXCjQBjIRIEzYO875mLiAiEEYjA58D8=</HashCode>
+      <FileName>Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramovatelnaKalkulacka.HlasovaciPrava">
+    <Position X="5.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQAAAAAIBAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>HlasovaciPrava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramovatelnaKalkulacka.Kalkulacka">
+    <Position X="3.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAEAAAAAAAAAAAAECAAASAAAAAAAA=</HashCode>
+      <FileName>Kalkulacka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramovatelnaKalkulacka.Logging">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramovatelnaKalkulacka.Polynom">
+    <Position X="0.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAIAAAEAA=</HashCode>
+      <FileName>Polynom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramovatelnaKalkulacka.ProgramovatelnaKalkulacka">
+    <Position X="5.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAFAEAAAAAAAAAAAEAEIAAAEAAAAAAAIAAGAAED8AwM=</HashCode>
+      <FileName>ProgramovatelnaKalkulacka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

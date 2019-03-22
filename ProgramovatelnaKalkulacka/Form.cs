@@ -167,15 +167,94 @@ namespace ProgramovatelnaKalkulacka
             {
                 label7.ForeColor = System.Drawing.Color.Green;
                 label7.Text = string.Format("Schuze je usnasenischopna, podil zucastnenych vlastniku jednotek je: {0} %", Math.Round(plochaZadanychJednotek / plochaVsechJednotek * 100,2));
+                
             }
             else {
                 label7.ForeColor = System.Drawing.Color.Red;
-                label7.Text = string.Format("Schuze neni usnasenischopna, podil zucastnenych vlastniku jednotek je: {0} %", plochaZadanychJednotek / plochaVsechJednotek * 100);
+                label7.Text = string.Format("Schuze neni usnasenischopna, podil zucastnenych vlastniku jednotek je: {0} %", Math.Round(plochaZadanychJednotek / plochaVsechJednotek * 100,2));
+            }
+            Logging.WriteLog(label7.Text, "C:\\temp\\Kalkulacka");
+        }
+
+        #endregion
+
+        #region Programovatelna kalkulacka
+
+        private static string makro;
+        private static string polynom;
+        private void btnPrgClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            updatePrgDisplay(ProgramovatelnaKalkulacka.zadejVstup(btn));
+        }
+
+        private void updatePrgDisplay(string update, Boolean replace = false)
+        {
+            if (tbProgram.Text == "" || replace)
+            {
+                tbProgram.Text = update;
+            }
+            else
+            {
+                tbProgram.Text += update;
+            }
+
+        }
+
+        private void btnRecord_Click(object sender, EventArgs e)
+        {
+            if (btnRecord.Text == "Začni nahrávat makro")
+            {
+                ProgramovatelnaKalkulacka.nahravejMakro();
+                btnRecord.Text = "Ukonči nahrávání makra";
+            }
+            else {
+                btnRecord.Text = "Začni nahrávat makro";
+                
+                makro = tbProgram.Text;
+                tbProgram.Text=ProgramovatelnaKalkulacka.smazatVse();
             }
         }
         
+        private void btnPrgVypocet(object sender, EventArgs e)
+        {
+
+        }
+        private void smazatVsePrgClick(object sender, EventArgs e)
+        {
+            tbProgram.Text = ProgramovatelnaKalkulacka.smazatVse();
+        }
+
+        private void btnExeClick(object sender, EventArgs e)
+        {
+
+            ProgramovatelnaKalkulacka.provedInstrukce(tbProgram);
+        }
+
+        private void funkceClick(object sender, EventArgs e)
+        {
+            string funkce = tbPolynom.Text;
+        }
+
+        private void spustMakroClick(object sender, EventArgs e)
+        {
+            tbProgram.Text= ProgramovatelnaKalkulacka.provedMakro(makro);
+        }
+
+        private void btnF1Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            updatePrgDisplay(ProgramovatelnaKalkulacka.zadejVstup(btn));
+            polynom = tbPolynom.Text;
+            ProgramovatelnaKalkulacka.ziskejPolynom(polynom);
+        }
+
+
         #endregion
 
-
+        private void smazatJedenZnakPrgClick(object sender, EventArgs e)
+        {
+                tbProgram.Text = ProgramovatelnaKalkulacka.smazatJedenZnak(tbProgram.Text);
+        }
     }
 }
